@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Space</title>
+    <style>
+        /* INBUILT CSS STARTS HERE */
+        :root {
+            --primary: #6366f1;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+        body {
+            background: radial-gradient(circle at top left, #1e293b, #0f172a);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem 10%;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        h1 { font-size: 4rem; margin-bottom: 1rem; }
+        p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; }
+
+        .btn {
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { opacity: 0.8; transform: translateY(-3px); }
+
+        /* Grid Section */
+        .container { padding: 5rem 10%; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PORTFOLIO.</div>
+        <div>
+            <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">Work</a>
+            <a href="#" style="color: white; text-decoration: none; margin-left: 20px;">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Creative Developer</h1>
+        <p>I build digital experiences that blend art with functional code. Transforming complex problems into elegant solutions.</p>
+        <a href="#work" class="btn">View My Projects</a>
+    </section>
+
+    <div class="container" id="work">
+        <div class="grid">
+            <div class="card">
+                <h3>Project Alpha</h3>
+                <p>A high-performance dashboard built for 2026 data analytics.</p>
+            </div>
+            <div class="card">
+                <h3>Project Beta</h3>
+                <p>An AI-integrated landing page with real-time user feedback.</p>
+            </div>
+            <div class="card">
+                <h3>Project Gamma</h3>
+                <p>Custom e-commerce solution with focus on minimalist UX.</p>
+            </div>
+        </div>
+    </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD4t095q7lxpGpswvCUwTalcFxlRvTwvD0",
+    authDomain: "webportal-3b7b1.firebaseapp.com",
+    projectId: "webportal-3b7b1",
+    storageBucket: "webportal-3b7b1.firebasestorage.app",
+    messagingSenderId: "869186459365",
+    appId: "1:869186459365:web:0a001075bdc39bd879660c",
+    measurementId: "G-J7N0P856PT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
